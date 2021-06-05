@@ -28,6 +28,7 @@ class WebexAutomation:
         try:
             self._connect()
             # join in browser button
+            
             WebDriverWait(self.driver, 8).until(EC.presence_of_element_located((
                 By.XPATH, "/html/body/div[1]/div[3]/div/div[1]/div/div[2]/div[1]/div[2]/div[2]/div[3]/a")))
             self.driver.find_element_by_xpath(
@@ -61,6 +62,17 @@ class WebexAutomation:
             #     By.XPATH, got_it_button)))
             # self.driver.find_element_by_xpath(
             #     got_it_button).click()
+
+            #Pressing Mute Button
+            WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((
+                By.XPATH, "/html/body/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/button")))
+            
+            self.driver.find_element_by_xpath(
+                "/html/body/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/button").click()
+
+            # Pressing video Button
+            self.driver.find_element_by_xpath(
+                "/html/body/div[1]/div[1]/div[3]/div[2]/div[2]/div[1]/button").click()
 
             # join meeting
             join = "/html/body/div[1]/div/div[3]/div[2]/span/button"

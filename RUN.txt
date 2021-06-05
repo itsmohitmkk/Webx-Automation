@@ -1,0 +1,9 @@
+
+//IN CMP
+
+cd ./Desktop/webex_automation
+python main.py -url https://sses.webex.com/sses/e.php?MTID=m576f9924e3db6b31e45d5f24fd6ce88c -name Mohit  -email itsmohitmk99@gmail.com
+
+
+//In terminal
+python server.py
